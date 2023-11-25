@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>山羊の前端小窝</title>
+    <title>温柔猫的图书馆目前正在建设中</title>
     <link rel="stylesheet" href="https://static.fontawesome.com/css/fontawesome-app.css">
     <!-- 引入字体图标 -->
     <link rel="stylesheet" href="./font/iconfont.css">
@@ -194,7 +194,7 @@
                     <div class="frame">
                         <div class="box front">
                             <h1>2014</h1>
-                            <span>-In the year 2014 I reached the age of 13-</span>
+                            <span>-In the year 2014 I reached the age of 10-</span>
                         </div>
                         <div class="box left"></div>
                         <div class="box right"> </div>
@@ -204,7 +204,7 @@
                     <div class="frame">
                         <div class="box front">
                             <h1>2015</h1>
-                            <span>-In the year 2015 I reached the age of 14-</span>
+                            <span>-In the year 2015 I reached the age of 11-</span>
                         </div>
                         <div class="box left"></div>
                         <div class="box right"> </div>
@@ -214,7 +214,7 @@
                     <div class="frame">
                         <div class="box front">
                             <h1>2016</h1>
-                            <span>-In the year 2016 I reached the age of 15-</span>
+                            <span>-In the year 2016 I reached the age of 12-</span>
                         </div>
                         <div class="box left"></div>
                         <div class="box right"></div>
@@ -224,7 +224,7 @@
                     <div class="frame">
                         <div class="box front">
                             <h1>2017</h1>
-                            <span>-In the year 2017 I reached the age of 16-</span>
+                            <span>-In the year 2017 I reached the age of 13-</span>
                         </div>
                         <div class="box left"></div>
                         <div class="box right"> </div>
@@ -234,7 +234,7 @@
                     <div class="frame">
                         <div class="box front">
                             <h1>2018</h1>
-                            <span>-In the year 2018 I reached the age of 17-</span>
+                            <span>-In the year 2018 I reached the age of 14-</span>
                         </div>
                         <div class="box left"></div>
                         <div class="box right"> </div>
@@ -244,7 +244,7 @@
                     <div class="frame">
                         <div class="box front">
                             <h1>2019</h1>
-                            <span>-In the year 2019 I reached the age of 18-</span>
+                            <span>-In the year 2019 I reached the age of 15-</span>
                         </div>
                         <div class="box left"></div>
                         <div class="box right"> </div>
@@ -254,7 +254,7 @@
                     <div class="frame">
                         <div class="box front">
                             <h1>2020</h1>
-                            <span>-In the year 2020 I reached the age of 18-</span>
+                            <span>-In the year 2020 I reached the age of 16-</span>
                         </div>
                         <div class="box left"></div>
                         <div class="box right"> </div>
@@ -264,7 +264,7 @@
                     <div class="frame">
                         <div class="box front">
                             <h1>2021</h1>
-                            <span>-In the year 2021 I reached the age of 19-</span>
+                            <span>-In the year 2021 I reached the age of 17-</span>
                         </div>
                         <div class="box left"></div>
                         <div class="box right"> </div>
@@ -274,7 +274,7 @@
                     <div class="frame">
                         <div class="box front">
                             <h1>2022</h1>
-                            <span>-In the year 2022 I reached the age of 20-</span>
+                            <span>-In the year 2022 I reached the age of 18-</span>
                         </div>
                         <div class="box left"></div>
                         <div class="box right"> </div>
@@ -284,7 +284,7 @@
                     <div class="frame">
                         <div class="box front">
                             <h1>2023</h1>
-                            <span>-In the year 2023 I reached the age of 21-</span>
+                            <span>-In the year 2023 I reached the age of 19-</span>
                         </div>
                         <div class="box left"></div>
                         <div class="box right"> </div>
@@ -293,6 +293,12 @@
             </div>
         </div>
     </div>
+    <audio id="myAudio" controls autoplay loop>
+        <!-- 提供多个音频源，以便浏览器选择支持的格式 -->
+        <source src="music/Yi Chou-Call of Silence(钢琴版).mp3" type="audio/mp3">
+        <source src="music/Mr.16罗隽永&Simyee陈芯怡-不需要挽留（Move On）.mp3）.mp3" type="audio/ogg">
+        你的浏览器暂不支持
+    </audio>
 </body>
 <script>
     // 这段JavaScript代码的作用是实现一个图片轮播效果。首先，通过document.getElementsByClassName('item')获取到所有具有item类名的元素，并将它们存储在items变量中。
@@ -316,7 +322,7 @@
         var leftBox = frame.getElementsByClassName('left')[0];
         var rightBox = frame.getElementsByClassName('right')[0];
         // 设置背景图片
-        frontBox.style.backgroundImage = 'url(./img/lunbo/01.webp' + (i + 1).toString().padStart(2, '0') + '01.webp)';
+        frontBox.style.backgroundImage = 'url(./img/' + (i + 1).toString().padStart(2, '0') + '.jpg)';
         leftBox.style.backgroundImage = 'url(./img/' + (i + 1).toString().padStart(2, '0') + '.jpg)';
         rightBox.style.backgroundImage = 'url(./img/' + (i + 1).toString().padStart(2, '0') + '.jpg)';
     }
@@ -402,6 +408,26 @@
             timer();
         }
     })();
+    var audio = document.getElementById("myAudio");
+
+    // 在页面加载完毕后，自动播放音频
+    window.addEventListener("load", function () {
+        // 添加交互事件，例如点击页面
+        document.body.addEventListener("click", function playAudio() {
+            // 尝试播放音频
+            audio.play().then(() => {
+                // 播放成功
+                console.log("音频已自动播放");
+                // 移除交互事件，以免重复触发
+                document.body.removeEventListener("click", playAudio);
+            }).catch((error) => {
+                // 播放失败，可能由于浏览器政策限制
+                console.error("音频自动播放失败:", error);
+            });
+        });
+    });
 </script>
+
+</html>
 
 </html>
